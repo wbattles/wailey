@@ -6,12 +6,9 @@ const apiKeyInput = document.getElementById("api-key-input");
 async function sendMessage() {
   const userMessage = input.value.trim();
   const apiKey = apiKeyInput.value.trim();
-  
+
   if (!userMessage) return;
-  if (!apiKey) {
-    alert("Please enter your API key first");
-    return;
-  }
+  if (!apiKey) return;
 
   // Show user message
   const userDiv = document.createElement("div");
