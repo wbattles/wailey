@@ -2,7 +2,7 @@ const input = document.getElementById("chat-input");
 const button = document.getElementById("send-button");
 const display = document.getElementById("chat-display");
 
-const API_KEY = "";
+const API_KEY = "{{API_KEY}}";
 
 async function sendMessage() {
   const userMessage = input.value.trim();
