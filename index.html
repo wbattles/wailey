@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuesday</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #chat-display {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    #chat-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    #chat-input {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    /* #chat-display div {
+        margin-bottom: 20px;
+    } */
+
+  </style>
+</head>
+<body>
+  <div id="chat-display"></div>
+
+  <div id="chat-bar">
+    <input type="text" id="chat-input" placeholder="Type a message...">
+    <button id="send-button">Send</button>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
