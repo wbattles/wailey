@@ -1,12 +1,17 @@
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-button");
 const display = document.getElementById("chat-display");
-
-const API_KEY = "{{API_KEY}}";
+const apiKeyInput = document.getElementById("api-key-input");
 
 async function sendMessage() {
   const userMessage = input.value.trim();
+  const apiKey = apiKeyInput.value.trim();
+  
   if (!userMessage) return;
+  if (!apiKey) {
+    alert("Please enter your API key first");
+    return;
+  }
 
   // Show user message
   const userDiv = document.createElement("div");
@@ -24,7 +29,7 @@ async function sendMessage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${API_KEY}`
+        "Authorization": `Bearer ${apiKey}`
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",

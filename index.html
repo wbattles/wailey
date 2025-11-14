@@ -23,7 +23,7 @@
       padding: 10px;
     }
 
-    #chat-input {
+    #chat-input, #api-key-input {
       flex: 1;
       max-width: 400px;
     }
@@ -36,6 +36,10 @@
 </head>
 <body>
   <div id="chat-display"></div>
+
+  <div id="chat-bar">
+    <input type="text" id="api-key-input" placeholder="Enter your API key...">
+  </div>
 
   <div id="chat-bar">
     <input type="text" id="chat-input" placeholder="Type a message...">
