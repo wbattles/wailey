@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tuesday</title>
+  <title>wailey</title>
   <style>
     body {
       margin: 0;
@@ -23,14 +23,27 @@
       padding: 10px;
     }
 
-    #chat-input, #api-key-input {
-      flex: 1;
-      max-width: 400px;
+    #chat-container {
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
     }
 
-    /* #chat-display div {
-        margin-bottom: 20px;
-    } */
+    #chat-input-row {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    #chat-input {
+      flex: 1;
+    }
+
+    #api-key-input {
+      width: 100%;
+      margin: 0;
+    }
 
   </style>
 </head>
@@ -38,12 +51,13 @@
   <div id="chat-display"></div>
 
   <div id="chat-bar">
-    <input type="text" id="api-key-input" placeholder="Enter your API key...">
-  </div>
-
-  <div id="chat-bar">
-    <input type="text" id="chat-input" placeholder="Type a message...">
-    <button id="send-button">Send</button>
+    <div id="chat-container">
+      <div id="chat-input-row">
+        <input type="text" id="chat-input" placeholder="">
+        <button id="send-button">Send</button>
+      </div>
+      <input type="text" id="api-key-input" placeholder="">
+    </div>
   </div>
 
   <script src="chat.js"></script>
