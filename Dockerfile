@@ -4,8 +4,7 @@ WORKDIR /app
 
 RUN npm install -g serve
 
-COPY index.html .
-COPY chat.js .
+COPY app/ .
 
 EXPOSE 3000
 
