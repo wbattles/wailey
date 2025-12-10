@@ -10,14 +10,12 @@ async function sendMessage() {
   if (!userMessage) return;
   if (!apiKey) return;
 
-  // Show user message
   const userDiv = document.createElement("div");
   userDiv.textContent = userMessage;
   display.appendChild(userDiv);
   display.scrollTop = display.scrollHeight;
   input.value = "";
 
-  // Placeholder for bot reply
   const replyDiv = document.createElement("div");
   replyDiv.textContent = "";
   display.appendChild(replyDiv);
